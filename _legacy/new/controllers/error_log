@@ -1,0 +1,228 @@
+[08-Oct-2024 19:32:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/brrgov/public_html/acc/classes/mysql.class.php:1064
+Stack trace:
+#0 /home/brrgov/public_html/acc/classes/mysql.class.php(80): MySQL->Open()
+#1 /home/brrgov/public_html/controllers/registration.php(9): MySQL->__construct()
+#2 {main}
+  thrown in /home/brrgov/public_html/acc/classes/mysql.class.php on line 1064
+[08-Oct-2024 19:33:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/brrgov/public_html/acc/classes/mysql.class.php:1064
+Stack trace:
+#0 /home/brrgov/public_html/acc/classes/mysql.class.php(80): MySQL->Open()
+#1 /home/brrgov/public_html/controllers/registration.php(9): MySQL->__construct()
+#2 {main}
+  thrown in /home/brrgov/public_html/acc/classes/mysql.class.php on line 1064
+[09-Oct-2024 04:15:02 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[09-Oct-2024 04:15:02 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=0547765220&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[16-Oct-2024 09:15:02 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[16-Oct-2024 09:15:02 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=07495633860&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[19-Oct-2024 15:40:02 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[19-Oct-2024 15:40:02 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=0549429558&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[23-Oct-2024 11:14:01 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[23-Oct-2024 11:14:01 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=0244713805&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[08-Nov-2024 15:40:02 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[08-Nov-2024 15:40:02 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=233534446987&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[19-Nov-2024 00:03:01 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[19-Nov-2024 00:03:01 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=0244425650&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[23-Nov-2024 06:38:01 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[23-Nov-2024 06:38:01 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=536949050&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[25-Nov-2024 14:23:01 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[25-Nov-2024 14:23:01 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=+233242600688&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[25-Nov-2024 14:25:18 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/controllers/process_reset.php on line 105
+[25-Nov-2024 14:25:18 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=+233242600688&amp;msg=Your+OTP+code+for+the+BRR+Portal+is+0359&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/controllers/process_reset.php on line 105
+[30-Nov-2024 11:47:01 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[30-Nov-2024 11:47:01 UTC] PHP Warning:  file_get_contents(https://apps.mnotify.net/smsapi?key=tdh19aN2wBSUv2LY6Q4Vj09I4&amp;to=0257647830&amp;msg=Hello%2CThank+you+for+signing+up+to+be+part+of+the+Community+of+Users+on+the+Ghana+Business+Regulatory+Reforms+%28BRR%29+Portal%2C+www.brr.gov.gh.+As+a+member+of+this+Community%2C+you+would+receive+notifications+on+draft+public+policies+and%2For+updates+on+existing+regulations.+You+would+also+be+able+to+share+your+views+on+any+posted+policy+and+participate+in+Polls+%26+Surveys.+For+further+enquiries%2C+please+contactbrr%40moti.gov.gh+or+info%40brr.gov.gh+Thanks+You.&amp;sender_id=Moti BRR): failed to open stream: no suitable wrapper could be found in /home/brrgov/public_html/acc/classes/sms.class.php on line 100
+[30-Dec-2024 22:06:59 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[30-Dec-2024 22:06:59 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[30-Dec-2024 22:06:59 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[30-Dec-2024 22:08:32 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[30-Dec-2024 22:08:32 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[30-Dec-2024 22:08:32 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[30-Dec-2024 22:08:43 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/process_reset.php on line 2
+[30-Dec-2024 22:08:43 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/process_reset.php on line 2
+[30-Dec-2024 22:08:43 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/process_reset.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/process_reset.php on line 3
+[31-Dec-2024 08:21:17 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/registration.php on line 2
+[31-Dec-2024 08:21:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/registration.php on line 2
+[31-Dec-2024 08:21:17 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/registration.php on line 3
+[31-Dec-2024 08:21:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/registration.php on line 3
+[31-Dec-2024 08:21:17 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/registration.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/registration.php on line 9
+[02-Apr-2025 18:00:59 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:00:59 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:00:59 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:01:30 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:01:30 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:01:30 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:07 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:02:08 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:08 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:08 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[02-Apr-2025 18:02:08 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:08 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/brrgov/public_html/new/controllers/authenticate.php on line 2
+[02-Apr-2025 18:02:08 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/authenticate.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/authenticate.php on line 3
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:17 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:17 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:17 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:19 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:21 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:22 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(../acc/classes/mysql.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(): Failed opening '../acc/classes/mysql.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 2
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(../acc/classes/sms.class.php): failed to open stream: No such file or directory in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:22 UTC] PHP Warning:  include(): Failed opening '../acc/classes/sms.class.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/brrgov/public_html/new/controllers/contact.php on line 3
+[12-Aug-2025 14:00:22 UTC] PHP Fatal error:  Uncaught Error: Class 'MySQL' not found in /home/brrgov/public_html/new/controllers/contact.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/brrgov/public_html/new/controllers/contact.php on line 5
