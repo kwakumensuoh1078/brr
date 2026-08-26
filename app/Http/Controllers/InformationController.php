@@ -46,6 +46,7 @@ class InformationController extends Controller
             'phone' => 'nullable|string|max:30',
             'sector' => 'nullable|string|max:100',
             'message' => 'required|string|max:5000',
+            'cf-turnstile-response' => [new \App\Rules\Turnstile],
         ]);
 
         return redirect()->back()->with('success', 'Thank you! Your feedback has been received and routed to the BRR team.');

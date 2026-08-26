@@ -28,8 +28,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/scss/elements/theme-css.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" id="creote-color-switcher-css" href="{{ asset('assets/css/scss/elements/color-switcher/color.css') }}" type="text/css" media="all" />
-    
+    <!-- Cloudflare Turnstile CAPTCHA API -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <!-- Custom styling & bot protections -->
     <style>
         .hp-field {
@@ -295,6 +296,7 @@
                                         <i class="fa fa-comments"></i>
                                     </label>
                                 </p>
+                                <div class="cf-turnstile my-2" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="light"></div>
                                 <p><input type="submit" value="Submit" id="sendModalMessage" class="theme-btn one" /></p>
                             </form>
                         </div>

@@ -128,6 +128,7 @@
                                 </div>
 
                                 <div class="col-sm-12">
+                                    <div class="cf-turnstile my-2" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="light"></div>
                                     <button type="submit" class="btn btn-danger" id="sendEnquiry">Send Your Concerns</button>
                                 </div>
                             </div>

@@ -83,6 +83,8 @@
                             </div>
                         </div>
 
+                        <div class="cf-turnstile my-3 d-flex justify-content-center" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="light"></div>
+
                         <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold mb-3" style="background-color: #04b3f6; border-color: #04b3f6; font-size: 15px;">
                             <i class="fa fa-user-plus me-1"></i> Register Account
                         </button>

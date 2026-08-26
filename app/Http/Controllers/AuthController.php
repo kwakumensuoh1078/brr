@@ -7,6 +7,8 @@ use App\Models\UsrUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+use App\Rules\Turnstile;
+
 class AuthController extends Controller
 {
     public function showLogin()
@@ -19,6 +21,7 @@ class AuthController extends Controller
         $request->validate([
             'username' => 'required|string',
             'password' => 'required|string',
+            'cf-turnstile-response' => [new Turnstile],
         ]);
 
         $username = $request->input('username');
@@ -75,6 +78,7 @@ class AuthController extends Controller
             'username' => 'required|string|max:100|unique:usr_users,username',
             'phone_number' => 'required|string|max:25',
             'password' => 'required|string|min:8|confirmed',
+            'cf-turnstile-response' => [new Turnstile],
         ]);
 
         $user = UsrUser::create([

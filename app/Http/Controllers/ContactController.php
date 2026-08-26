@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactUs;
+use App\Rules\Turnstile;
 
 class ContactController extends Controller
 {
@@ -21,6 +22,7 @@ class ContactController extends Controller
             'tele' => 'nullable|string|max:30',
             'phone' => 'nullable|string|max:30',
             'message' => 'required|string|max:5000',
+            'cf-turnstile-response' => [new Turnstile],
         ]);
 
         ContactUs::create([

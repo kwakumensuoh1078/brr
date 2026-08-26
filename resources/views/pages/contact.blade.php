@@ -63,6 +63,7 @@
                                 <textarea name="message" rows="5" class="form-control" placeholder="Write your message here..." required>{{ old('message') }}</textarea>
                             </div>
                             <div class="col-12">
+                                <div class="cf-turnstile my-2" data-sitekey="{{ config('services.turnstile.key') }}" data-theme="light"></div>
                                 <button type="submit" class="btn btn-success px-4 py-2">
                                     <i class="fa fa-paper-plane me-1"></i> Send Message
                                 </button>

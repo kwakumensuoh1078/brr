@@ -1,0 +1,37 @@
+# ----------------------------------------------------------------------
+# Root .htaccess for BRR Portal (Laravel 11 Deployment)
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Do NOT rewrite requests for subdomain reforms.brr.gov.gh
+    RewriteCond %{HTTP_HOST} ^reforms\.brr\.gov\.gh$ [NC]
+    RewriteRule ^ - [L]
+
+    # 2. Do NOT rewrite requests targeted at reforms subdomain or standalone folders
+    RewriteCond %{REQUEST_URI} ^/(reforms\.brr\.gov\.gh|reforms|acc)/ [NC]
+    RewriteRule ^ - [L]
+
+    # 3. Rewrite all main site traffic to the /public directory
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Block Direct Access to Sensitive Files & Dotfiles
+# ----------------------------------------------------------------------
+<FilesMatch "^\.(env|git|editorconfig|gitattributes)|composer\.(json|lock)|package\.(json|lock)|phpunit\.xml|vite\.config\.js">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# Security Headers
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
