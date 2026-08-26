@@ -185,6 +185,23 @@
             box-shadow: 0 0 0 0.2rem rgba(4, 179, 246, 0.25) !important;
             z-index: 3 !important;
         }
+
+        /* Modal map container full-width fix */
+        .modal_popup .modal-popup-inner .post_contet_modal .modal_map_wrapper,
+        .modal_popup .modal-popup-inner .post_contet_modal .post_enable {
+            display: block !important;
+            width: 100% !important;
+            height: 380px !important;
+            grid-template-columns: none !important;
+        }
+        .modal_popup .modal-popup-inner .post_contet_modal .modal_map_wrapper iframe,
+        .modal_popup .modal-popup-inner .post_contet_modal .post_enable iframe {
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 380px !important;
+            display: block !important;
+            border: 0 !important;
+        }
     </style>
     @stack('styles')
 </head>
@@ -286,8 +303,8 @@
                         <div class="abt_content">
                             <div class="post_contet_modal">
                                 <h2>Location Map</h2>
-                                <div class="post_enable">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.115799788152!2d-0.20010908543874295!3d5.549846035255101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90904264d5c7%3A0xd1ebb7f8931a4599!2sMinistry+of+Trade+and+Industry!5e0!3m2!1sen!2sgh!4v1491370888275" width="100%" height="320" frameborder="0" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                                <div class="modal_map_wrapper" style="width: 100%; height: 380px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.115799788152!2d-0.20010908543874295!3d5.549846035255101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90904264d5c7%3A0xd1ebb7f8931a4599!2sMinistry+of+Trade+and+Industry!5e0!3m2!1sen!2sgh!4v1491370888275" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 380px; display: block;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                             <div class="copright mt-3 text-white">
