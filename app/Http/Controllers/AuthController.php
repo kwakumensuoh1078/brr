@@ -41,7 +41,20 @@ class AuthController extends Controller
             if ($authenticated) {
                 Auth::login($user);
                 $request->session()->regenerate();
-                return redirect()->away('http://acc.brr.gov.gh/');
+
+                // Populate legacy session variables if native PHP session is active
+                if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+                    @session_start();
+                }
+                if (session_status() === PHP_SESSION_ACTIVE) {
+                    $_SESSION['BCP_fullname'] = $user->user_fullname;
+                    $_SESSION['BCP_email'] = $user->username;
+                    $_SESSION['BCP_userID'] = $user->sid ?: $user->id;
+                    $_SESSION['BCP_userType'] = $user->userType;
+                    $_SESSION['BCP_UserGroup'] = $user->user_cat;
+                }
+
+                return redirect('/acc/inc/dashboard.php');
             }
         }
 
