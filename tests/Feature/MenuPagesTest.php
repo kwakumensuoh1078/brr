@@ -22,6 +22,14 @@ class MenuPagesTest extends TestCase
         $response->assertSee("2024 Over-all Score", false);
     }
 
+    public function test_bready_performance_data_renders()
+    {
+        $response = $this->get(route('bready.performance_data'));
+        $response->assertStatus(200);
+        $response->assertSee('Performance Data', false);
+        $response->assertSee("Ghana's Outlook", false);
+    }
+
     public function test_rolling_review_overview_renders()
     {
         $response = $this->get(route('rolling_review.overview'));

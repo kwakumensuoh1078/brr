@@ -194,7 +194,7 @@
                                      </li>
 
                                      <!-- B-Ready Dropdown -->
-                                     <li class="menu-item menu-item-has-children dropdown nav-item {{ request()->is('b-ready*') || request()->is('b_ready*') ? 'active' : '' }}">
+                                     <li class="menu-item menu-item-has-children dropdown nav-item {{ request()->is('b-ready*') || request()->is('b_ready*') || request()->is('performance-data*') ? 'active' : '' }}">
                                          <a href="#" class="dropdown-toggle nav-link">
                                              <span>B Ready</span>
                                          </a>
@@ -207,6 +207,11 @@
                                              <li class="menu-item nav-item">
                                                  <a href="{{ route('bready.ghana') }}" class="dropdown-item nav-link">
                                                      <span>Ghana's Outlook</span>
+                                                 </a>
+                                             </li>
+                                             <li class="menu-item nav-item">
+                                                 <a href="{{ route('bready.performance_data') }}" class="dropdown-item nav-link">
+                                                     <span>Performance Data</span>
                                                  </a>
                                              </li>
                                          </ul>

@@ -88,6 +88,7 @@ Route::prefix('b-ready')->name('bready.')->group(function () {
     Route::get('/', [BReadyController::class, 'overview'])->name('overview');
     Route::get('/overview', [BReadyController::class, 'overview'])->name('overview_view');
     Route::get('/ghana', [BReadyController::class, 'ghana'])->name('ghana');
+    Route::get('/performance-data', [BReadyController::class, 'performanceData'])->name('performance_data');
     Route::get('/topic/{id}', [BReadyController::class, 'topic'])->name('topic');
 });
 
@@ -97,6 +98,8 @@ Route::get('/b_ready.php', [BReadyController::class, 'overview']);
 Route::get('/b-ready.php', [BReadyController::class, 'overview']);
 Route::get('/b-readyghana', [BReadyController::class, 'ghana']);
 Route::get('/b-readyghana.php', [BReadyController::class, 'ghana']);
+Route::get('/performance-data', [BReadyController::class, 'performanceData']);
+Route::get('/performance-data.php', [BReadyController::class, 'performanceData']);
 Route::get('/b-readytopic', function (\Illuminate\Http\Request $request) {
     $id = $request->get('id', 1);
     return redirect()->route('bready.topic', ['id' => $id]);

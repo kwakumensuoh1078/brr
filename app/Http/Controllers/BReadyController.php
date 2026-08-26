@@ -13,9 +13,48 @@ use App\Models\YearScore;
 use App\Models\YearPillarScore;
 use App\Models\IndicatorInst;
 use App\Models\Org;
+use App\Models\YearNarrative;
 
 class BReadyController extends Controller
 {
+    public function performanceData()
+    {
+        $narrative = YearNarrative::orderBy('id', 'desc')->first();
+        $pillars = Pillar::orderBy('id', 'asc')->get();
+        
+        $latestYear = IndScore::orderBy('yr', 'desc')->value('yr') ?? ($narrative?->year ?? date('Y'));
+        
+        $indicators = Indicator::where('comp_id', 1)->orderBy('name', 'asc')->get();
+        if ($indicators->isEmpty()) {
+            $indicators = Indicator::orderBy('name', 'asc')->get();
+        }
+
+        $indicatorData = $indicators->map(function ($ind) use ($latestYear) {
+            $scoreRecord = IndScore::where('ind_id', $ind->id)
+                ->where('yr', $latestYear)
+                ->first();
+
+            return [
+                'indicator' => $ind,
+                'score' => $scoreRecord?->score,
+                'image' => $scoreRecord?->image,
+            ];
+        });
+
+        $yearsList = YearPillarScore::distinct()->orderBy('year', 'desc')->pluck('year');
+        $allYearPillarScores = YearPillarScore::all();
+
+        return view('pages.bready.performance_data', compact(
+            'narrative',
+            'pillars',
+            'latestYear',
+            'indicators',
+            'indicatorData',
+            'yearsList',
+            'allYearPillarScores'
+        ));
+    }
+
     public function overview()
     {
         $pillars = Pillar::orderBy('id', 'desc')->get();
