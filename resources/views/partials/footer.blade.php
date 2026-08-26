@@ -142,7 +142,7 @@
             </div>
 
             <!--===============spacing==============-->
-            <div class="pd_bottom_80"></div>
+            <div class="pd_bottom_50"></div>
             <!--===============spacing==============-->
         </div>
     </div>
@@ -155,20 +155,17 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="color_white">
-                        &copy; {{ date('Y') }} <a href="{{ route('home') }}" class="color_white fw-bold">BRR Ghana.</a> All Rights Reserved.
+                        &copy; {{ date('Y') }} <a href="{{ route('home') }}" class="color_white">BRR Ghana.</a> All Rights Reserved.
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="nav_link_v_one text-md-end">
-                        <ul class="d-flex justify-content-lg-end justify-content-start list-unstyled mb-0 gap-3">
+                        <ul>
                             <li>
                                 <a href="{{ route('terms') }}" class="color_white">Terms Of Use</a>
                             </li>
                             <li>
                                 <a href="{{ route('privacy') }}" class="color_white">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('contact') }}" class="color_white">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -180,3 +177,8 @@
         <!--===============spacing==============-->
     </div>
 </div>
+
+<!-- Chatbase Integration -->
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="7gsdx5QeCOyVlQTsW3Olz";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
