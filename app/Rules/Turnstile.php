@@ -17,13 +17,8 @@ class Turnstile implements ValidationRule
     {
         $secret = config('services.turnstile.secret');
 
-        // If secret is not set, skip in non-production or pass
-        if (empty($secret)) {
-            return;
-        }
-
-        // Allow bypassing in automated testing environment if no token provided
-        if (app()->environment('testing') && empty($value)) {
+        // If secret is not set or in testing environment / using dummy test keys, skip remote HTTP call
+        if (empty($secret) || app()->environment('testing') || $secret === '1x0000000000000000000000000000000AA') {
             return;
         }
 

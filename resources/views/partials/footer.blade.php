@@ -142,23 +142,41 @@
             </div>
 
             <!--===============spacing==============-->
-            <div class="pd_bottom_50"></div>
+            <div class="pd_bottom_80"></div>
             <!--===============spacing==============-->
         </div>
     </div>
 
-    <div class="footer_copy_right position-relative">
+    <div class="footer-copyright bg_dark_1">
+        <!--===============spacing==============-->
+        <div class="pd_top_20"></div>
+        <!--===============spacing==============-->
         <div class="container">
-            <div class="row align-items-center py-3">
-                <div class="col-lg-6 col-md-12 text-center text-lg-start">
-                    <p class="text-white mb-0">&copy; {{ date('Y') }} Business Regulatory Reforms (BRR) Portal. Republic of Ghana. All Rights Reserved.</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="color_white">
+                        &copy; {{ date('Y') }} <a href="{{ route('home') }}" class="color_white fw-bold">BRR Ghana.</a> All Rights Reserved.
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-12 text-center text-lg-end mt-2 mt-lg-0">
-                    <a href="{{ route('privacy') }}" class="text-white-50 me-3">Privacy Statement</a>
-                    <a href="{{ route('terms') }}" class="text-white-50 me-3">Terms of Use</a>
-                    <a href="{{ route('contact') }}" class="text-white-50">Support</a>
+                <div class="col-lg-6 col-md-12">
+                    <div class="nav_link_v_one text-md-end">
+                        <ul class="d-flex justify-content-lg-end justify-content-start list-unstyled mb-0 gap-3">
+                            <li>
+                                <a href="{{ route('terms') }}" class="color_white">Terms Of Use</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('privacy') }}" class="color_white">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('contact') }}" class="color_white">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--===============spacing==============-->
+        <div class="pd_bottom_20"></div>
+        <!--===============spacing==============-->
     </div>
 </div>

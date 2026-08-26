@@ -426,10 +426,25 @@
                             <div class="owl-carousel owl_nav_block owl_dots_none owl_type_two theme_carousel owl-theme"
                                 data-options='{"loop": true, "margin": 20, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "2" } , "1000":{ "items" : "2" }}}'>
                                 @foreach($didYouKnows as $ttr)
+                                    @php
+                                        $dykFallback = asset('assets/images/bcp_logo.png');
+                                        $dykImg = $dykFallback;
+                                        if (!empty($ttr->image)) {
+                                            if (file_exists(public_path('acc/did_you_know/' . $ttr->image))) {
+                                                $dykImg = asset('acc/did_you_know/' . $ttr->image);
+                                            } elseif (file_exists(public_path($ttr->image))) {
+                                                $dykImg = asset($ttr->image);
+                                            } elseif (file_exists(public_path('acc/' . $ttr->image))) {
+                                                $dykImg = asset('acc/' . $ttr->image);
+                                            } else {
+                                                $dykImg = asset('acc/did_you_know/' . $ttr->image);
+                                            }
+                                        }
+                                    @endphp
                                     <div class="testimonial_box type_two">
                                         <div class="upper_content">
-                                            <div class="image_box">
-                                                <img src="{{ $ttr->image ? asset('acc/did_you_know/' . $ttr->image) : asset('assets/images/about/about-1.png') }}" class="img-fluid" alt="image">
+                                            <div class="image_box" style="background: #fff; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 8px;">
+                                                <img src="{{ $dykImg }}" onerror="this.onerror=null;this.src='{{ $dykFallback }}';" class="img-fluid" alt="{{ $ttr->title ?: 'Did You Know' }}" style="max-height: 70px; width: auto; object-fit: contain;">
                                                 <span class="icon-quote"></span>
                                             </div>
                                             <div class="description">
@@ -543,14 +558,27 @@
                 <main id="main" class="site-main" role="main">
                     <article class="clearfix service type-service status-publish has-post-thumbnail hentry">
                         <div class="row grid_layout">
-                            @foreach($latestNews as $rowe)
+                            @foreach($latestNews as $loopIndex => $rowe)
                                 @php
                                     $dt = $rowe->posted_date ? new DateTime($rowe->posted_date) : new DateTime();
+                                    $defaultBlogImg = asset('assets/images/blog/blog-image-' . (($loop->index % 6) + 1) . '.jpg');
+                                    $newsImg = $defaultBlogImg;
+                                    if (!empty($rowe->newsImage)) {
+                                        if (file_exists(public_path('acc/event/' . $rowe->newsImage))) {
+                                            $newsImg = asset('acc/event/' . $rowe->newsImage);
+                                        } elseif (file_exists(public_path($rowe->newsImage))) {
+                                            $newsImg = asset($rowe->newsImage);
+                                        } elseif (file_exists(public_path('acc/' . $rowe->newsImage))) {
+                                            $newsImg = asset('acc/' . $rowe->newsImage);
+                                        } else {
+                                            $newsImg = asset('acc/event/' . $rowe->newsImage);
+                                        }
+                                    }
                                 @endphp
                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 grid_box mb-4">
                                     <div class="news_box style_one blog_classic has_images">
-                                        <div class="image img_hover-1">
-                                            <img width="750" height="420" src="{{ $rowe->newsImage ? asset('acc/event/' . $rowe->newsImage) : asset('assets/images/blog/blog-image-1.jpg') }}" class="wp-post-image" alt="{{ $rowe->newsTitle }}">
+                                        <div class="image img_hover-1" style="border-radius: 6px; overflow: hidden; background: #f0f2f5;">
+                                            <img width="750" height="420" src="{{ $newsImg }}" onerror="this.onerror=null;this.src='{{ $defaultBlogImg }}';" class="wp-post-image" alt="{{ $rowe->newsTitle }}" style="height: 240px; width: 100%; object-fit: cover;">
                                             <a class="arrow" href="{{ route('publications') }}">
                                                 <i class="fa fa-angle-right"></i>
                                             </a>
