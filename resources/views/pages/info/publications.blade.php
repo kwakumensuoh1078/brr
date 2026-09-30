@@ -40,6 +40,17 @@
                     <!--===============spacing==============-->
 
                     <section class="blog_single_details_outer">
+                        <form method="GET" action="{{ route('publications') }}" class="mb-3">
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control"
+                                       placeholder="Search publications by title or description..."
+                                       value="{{ request('search') }}">
+                                <button type="submit" class="btn btn-success"><i class="fa fa-search me-1"></i> Search</button>
+                                @if(request('search'))
+                                    <a href="{{ route('publications') }}" class="btn btn-outline-secondary">Clear</a>
+                                @endif
+                            </div>
+                        </form>
                         <div class="table-responsive">
                             <table id="example" class="table table-striped table-bordered table-hover display" style="width:100%">
                                 <thead>

@@ -78,12 +78,19 @@ class InformationController extends Controller
         return view('pages.info.terms');
     }
 
-    public function publications()
+    public function publications(Request $request)
     {
-        $publications = News::with('org')
-            ->orderBy('id', 'desc')
-            ->paginate(12);
+        $query = News::with(['org', 'pubCat', 'sector']);
 
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('description', 'like', "%{$search}%");
+            });
+        }
+
+        $publications = $query->orderBy('id', 'desc')->paginate(12);
         $categories = PublicationCat::orderBy('id', 'desc')->get();
 
         return view('pages.info.publications', compact('publications', 'categories'));

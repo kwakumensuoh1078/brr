@@ -61,13 +61,22 @@ class BusinessRegulationController extends Controller
         return view('pages.regulations.by_institution', compact('institutions'));
     }
 
-    public function institutionDetails($id)
+    public function institutionDetails($id, Request $request)
     {
         $institution = Org::withCount('regulations')->findOrFail($id);
-        $docs = Regulation::with(['consultationType', 'subject', 'interest'])
-            ->where('agency_id', $id)
-            ->orderBy('id', 'desc')
-            ->paginate(15);
+
+        $query = Regulation::with(['consultationType', 'subject', 'interest'])
+            ->where('agency_id', $id);
+
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('no', 'like', "%{$search}%");
+            });
+        }
+
+        $docs = $query->orderBy('id', 'desc')->paginate(15);
 
         return view('pages.regulations.institution_details', compact('institution', 'docs'));
     }
@@ -118,16 +127,24 @@ class BusinessRegulationController extends Controller
     {
         $years = Regulation::selectRaw('DISTINCT year')
             ->whereNotNull('year')
-            ->where('year', '!=', '')
+            ->where('year', '!=' , '')
             ->orderBy('year', 'desc')
             ->pluck('year');
 
         $selectedYear = $request->input('year', $years->first() ?: date('Y'));
 
-        $docs = Regulation::with(['consultationType', 'org', 'subject'])
-            ->where('year', $selectedYear)
-            ->orderBy('id', 'desc')
-            ->paginate(15);
+        $query = Regulation::with(['consultationType', 'org', 'subject'])
+            ->where('year', $selectedYear);
+
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('no', 'like', "%{$search}%");
+            });
+        }
+
+        $docs = $query->orderBy('id', 'desc')->paginate(15);
 
         return view('pages.regulations.by_year', compact('years', 'selectedYear', 'docs'));
     }

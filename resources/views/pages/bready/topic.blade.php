@@ -85,8 +85,15 @@
                         </div>
 
                         <div class="row">
+                            <div class="mb-2">
+                                <div class="input-group input-group-sm" style="max-width: 400px;">
+                                    <input type="text" id="valuesSearch" class="form-control"
+                                           placeholder="Filter indicator parameters...">
+                                    <span class="input-group-text bg-white"><i class="fa fa-search text-muted"></i></span>
+                                </div>
+                            </div>
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
+                                <table id="valuesTable" class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -110,6 +117,14 @@
                                 </table>
                             </div>
                         </div>
+                        <script>
+                        document.getElementById('valuesSearch').addEventListener('input', function() {
+                            var q = this.value.toLowerCase();
+                            document.querySelectorAll('#valuesTable tbody tr').forEach(function(row) {
+                                row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+                            });
+                        });
+                        </script>
 
                         <!--===============spacing==============-->
                         <div class="pd_bottom_15"></div>

@@ -58,7 +58,7 @@ class ConsultationController extends Controller
         return view('pages.consultations.closed', compact('consultations'));
     }
 
-    public function calendar()
+    public function calendar(Request $request)
     {
         $allConsultations = ConsultationDetails::whereNotNull('start_date')
             ->where('start_date', '!=', '')
@@ -83,12 +83,22 @@ class ConsultationController extends Controller
             ];
         });
 
-        $workshops = ConsultationDetails::with(['officer.org'])
-            ->orderBy('id', 'desc')
-            ->paginate(10);
+        $query = ConsultationDetails::with(['officer.org'])->orderBy('id', 'desc');
+
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('topic', 'like', "%{$search}%")
+                  ->orWhere('brief_background', 'like', "%{$search}%")
+                  ->orWhere('summary', 'like', "%{$search}%");
+            });
+        }
+
+        $workshops = $query->paginate(10);
 
         return view('pages.consultations.calendar', compact('events', 'workshops'));
     }
+
 
     public function discussions()
     {

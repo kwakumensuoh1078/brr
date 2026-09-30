@@ -38,6 +38,17 @@
             </div>
 
             <div class="col-12">
+                <form method="GET" action="{{ route('consultations.calendar') }}" class="mb-3">
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control"
+                               placeholder="Search consultations by topic, background..."
+                               value="{{ request('search') }}">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-search me-1"></i> Search</button>
+                        @if(request('search'))
+                            <a href="{{ route('consultations.calendar') }}" class="btn btn-outline-secondary">Clear</a>
+                        @endif
+                    </div>
+                </form>
                 <div class="table-responsive bg-white rounded shadow-sm p-3">
                     <table class="table table-hover align-middle mb-0">
                         <thead class="table-dark" style="background-color: #ad2702;">

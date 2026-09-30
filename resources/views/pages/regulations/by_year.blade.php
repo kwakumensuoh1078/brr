@@ -45,11 +45,19 @@
 
         <!-- Table of Regulations for Selected Year -->
         <div class="card border-0 shadow-sm p-4 bg-white" style="border-radius: 8px;">
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
                 <h4 class="fw-bold mb-0 text-dark">
                     <i class="fa fa-book text-danger me-2"></i> Regulations Enacted in {{ $selectedYear }}
                 </h4>
-                <span class="badge bg-danger fs-6">{{ $docs->total() }} Regulations</span>
+                <form method="GET" action="{{ route('regulations.by_year') }}" class="d-flex gap-2">
+                    <input type="hidden" name="year" value="{{ $selectedYear }}">
+                    <input type="text" name="search" class="form-control form-control-sm"
+                           placeholder="Search title or number..." value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-search"></i></button>
+                    @if(request('search'))
+                        <a href="{{ route('regulations.by_year', ['year' => $selectedYear]) }}" class="btn btn-sm btn-outline-secondary">Clear</a>
+                    @endif
+                </form>
             </div>
 
             <div class="table-responsive">

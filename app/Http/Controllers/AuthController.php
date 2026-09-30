@@ -30,11 +30,16 @@ class AuthController extends Controller
         $user = UsrUser::where('username', $username)->orWhere('phone_number', $username)->first();
 
         if ($user) {
-            // Check password (support both legacy md5/plain or bcrypt)
+            // Check password (support both legacy sha1/md5/plain or bcrypt)
             $authenticated = false;
-            if (Hash::check($password, $user->password)) {
-                $authenticated = true;
-            } elseif ($user->password === md5($password) || $user->password === sha1($password) || $user->password === $password) {
+            try {
+                if (Hash::check($password, $user->password)) {
+                    $authenticated = true;
+                }
+            } catch (\RuntimeException $e) {
+                // Stored hash is not bcrypt — fall through to legacy check below
+            }
+            if (!$authenticated && ($user->password === sha1($password) || $user->password === md5($password) || $user->password === $password)) {
                 // Upgrade password hash to bcrypt automatically
                 $user->password = Hash::make($password);
                 $user->save();

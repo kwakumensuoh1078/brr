@@ -72,13 +72,35 @@
                     </div>
 
                     @if($doc->document)
-                        <div class="p-4 border rounded bg-light text-center mb-4">
-                            <i class="fa fa-file-pdf-o text-danger fa-3x mb-2"></i>
-                            <h5 class="fw-bold mb-1">Official Regulation Document</h5>
-                            <p class="text-muted small mb-3">{{ basename($doc->document) }}</p>
-                            <a href="{{ asset('upload/regulation_doc/' . $doc->document) }}" class="btn btn-success px-4" target="_blank" download>
-                                <i class="fa fa-download me-1"></i> Download Official Law Document
-                            </a>
+                        @php
+                            $docUrl = asset('acc/register/' . $doc->document);
+                            $docExt = strtolower(pathinfo($doc->document, PATHINFO_EXTENSION));
+                        @endphp
+                        <div class="border rounded overflow-hidden mb-4">
+                            <div class="d-flex justify-content-between align-items-center px-3 py-2 bg-light border-bottom">
+                                <span class="fw-semibold text-dark">
+                                    <i class="fa fa-file-pdf-o text-danger me-2"></i>{{ basename($doc->document) }}
+                                </span>
+                                <a href="{{ $docUrl }}" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fa fa-external-link me-1"></i> Open in new tab
+                                </a>
+                            </div>
+                            @if(in_array($docExt, ['pdf']))
+                                <iframe src="{{ $docUrl }}" width="100%" height="680" style="border:none; display:block;"
+                                    title="{{ $doc->title }}">
+                                    <p class="p-3">Your browser cannot display this PDF.
+                                        <a href="{{ $docUrl }}" target="_blank">Open document</a>.
+                                    </p>
+                                </iframe>
+                            @else
+                                <div class="p-4 text-center">
+                                    <i class="fa fa-file-o fa-3x text-secondary mb-2"></i>
+                                    <p class="text-muted">Preview not available for this file type.</p>
+                                    <a href="{{ $docUrl }}" target="_blank" class="btn btn-success px-4">
+                                        <i class="fa fa-eye me-1"></i> View Document
+                                    </a>
+                                </div>
+                            @endif
                         </div>
                     @endif
 
@@ -144,8 +166,9 @@
                                             @endif
                                         </div>
                                         @if($form->document)
-                                            <a href="{{ asset('upload/forms/' . $form->document) }}" class="btn btn-sm btn-outline-danger" target="_blank" download>
-                                                <i class="fa fa-download me-1"></i> Download Form
+                                            <a href="{{ asset('upload/forms/' . $form->document) }}" class="btn btn-sm btn-outline-danger" target="_blank"
+                                               title="View {{ $form->title }}">
+                                                <i class="fa fa-eye me-1"></i> View Form
                                             </a>
                                         @endif
                                     </div>

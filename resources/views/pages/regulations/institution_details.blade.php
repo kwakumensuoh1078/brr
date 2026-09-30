@@ -58,7 +58,17 @@
 
         <!-- Table of Regulations Enforced -->
         <div class="card border-0 shadow-sm p-4 bg-white" style="border-radius: 8px;">
-            <h4 class="fw-bold mb-4"><i class="fa fa-book text-success me-2"></i> Business Regulations & Decrees</h4>
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h4 class="fw-bold mb-0"><i class="fa fa-book text-success me-2"></i> Business Regulations & Decrees</h4>
+                <form method="GET" action="{{ route('regulations.institution_details', $institution->org_id) }}" class="d-flex gap-2">
+                    <input type="text" name="search" class="form-control form-control-sm"
+                           placeholder="Search title or number..." value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-search"></i></button>
+                    @if(request('search'))
+                        <a href="{{ route('regulations.institution_details', $institution->org_id) }}" class="btn btn-sm btn-outline-secondary">Clear</a>
+                    @endif
+                </form>
+            </div>
             <div class="table-responsive">
                 <table class="table table-hover align-middle">
                     <thead class="table-light">
